@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+set timeout 10
+
+# Connect to Kramer VIA Pro
+spawn telnet [lindex $argv 0] 9982
+
+# Log in as the administrative user
+expect -re "Login"
+sleep 1
+send "<P><UN>su</UN><Pwd>supass</Pwd><Cmd>Login</Cmd></P>\n"
+
+# Execute the reboot command
+expect "Now Please send a command:"
+sleep 1
+send "<P><UN>su</UN><Pwd></Pwd><Cmd>Reboot</Cmd></P>\n"
