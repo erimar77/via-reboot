@@ -2,6 +2,12 @@
 
 > This is a simple expect script to reboot the Kramer VIA Connect PRO using provided VIA API commands.
 
+
+## Requirements
+
+* (expect)[http://expect.sourceforge.net/]
+
+
 ## Install
 
 ```
