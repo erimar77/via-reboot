@@ -16,5 +16,5 @@ install:
   - if [[ "$TRAVIS_OS_NAME" = "linux" ]]; then sudo apt-get install telnet; else brew install telnet; fi
 
 script:
-  - via-reboot
+  - ./via-reboot
 
