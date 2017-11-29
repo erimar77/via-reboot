@@ -1,0 +1,20 @@
+language: bash
+
+branches:
+  only:
+    - master
+
+os:
+  - linux
+  - osx
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update; else brew update; fi
+
+install:
+  - if [[ "$TRAVIS_OS_NAME" = "linux" ]]; then sudo apt-get install expect; else brew install expect; fi
+  - if [[ "$TRAVIS_OS_NAME" = "linux" ]]; then sudo apt-get install telnet; else brew install telnet; fi
+
+script:
+  - via-reboot
+
