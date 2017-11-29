@@ -5,7 +5,7 @@
 
 ## Requirements
 
-* (expect)[http://expect.sourceforge.net/]
+* [expect](http://expect.sourceforge.net/)
 
 
 ## Install
