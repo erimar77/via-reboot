@@ -1,4 +1,10 @@
 #!/usr/bin/expect -f
+
+if {[llength $argv] != 1} {
+puts "Usage: via-reboot <ip address>"
+exit 1
+}
+
 set timeout 10
 
 # Connect to Kramer VIA Pro
